@@ -29,3 +29,28 @@ jQuery
 **UI frameworks:** 
 Bootstrap
 4.4.1
+
+**Estructura**
+
++FlaskApp
+|_la_app
+		|___init__.py
+		|_models.py
+		|_static/
+				|_css/
+				|_js/
+				|_img
+		|_templates/
+					|_base.html
+					|_entrada.html
+		|_register/
+					|___init__.py
+					|_models.py
+					|_views.py
+					|_static/
+					|_templates/
+								|_login.html
+								|_register.html
+		|_login/
+|_virtualpy/
+|_run.py
