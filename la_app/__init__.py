@@ -12,6 +12,8 @@ app = Flask(__name__)
 app.register_blueprint(register)
 app.register_blueprint(login)
 
+app.secret_key = "Llakcolnu"
+
 # para evitar el 404 de favicon
 @app.route('/favicon.ico') 
 def favicon(): 
