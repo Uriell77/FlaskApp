@@ -1,12 +1,18 @@
 {% extends './base.html' %}
 
 {% block title %}
-{{ dat }}
+{{ title }}
 {% endblock %}
 
 {% block notificacion %}
 <div class="alert alert-success alert-dismissible fade show position-absolute {%block stil%} {{ sti }} {% endblock %}" role="alert" style="width: 100%">
+  {% with mens = get_flashed_messages() %}
+  {% if mens %}
+  {% for men in mens %}
   <strong>{{ men }}</strong>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
