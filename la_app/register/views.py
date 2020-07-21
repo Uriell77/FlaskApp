@@ -1,6 +1,7 @@
 
 #importo el blueprint register 
 from la_app import register
+from . import register
 from flask import render_template, request, flash
 
 #primera vista de la app

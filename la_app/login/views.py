@@ -3,9 +3,11 @@
 from la_app import register
 from flask import render_template, request, flash, redirect, url_for
 from ..register.models import *
+from . import login
+
 
 #primera vista de la app
-@register.route('/login', methods=['GET','POST'])
+@login.route('/login', methods=['GET','POST'])
 def login():
 	if request.method == 'POST':
 		nombre = request.form['nombre']
@@ -15,6 +17,7 @@ def login():
 		confirm = request.form['repassword']
 
 		user = usuario(nombre, apellido, correo, password, confirm)
+
 		if user.booleano():
 			mens = "Te haz registrado correctamente"
 			flash(mens)
