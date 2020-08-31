@@ -10,7 +10,7 @@ def register():
 	if request.method == 'POST':
 		mens = 'Passwords no concuerdan'
 		flash(mens)
-		return render_template('register.html', title='Registro', sti='d-block')
+		return render_template('register.html', sti='d-block')
 	else:
-		return render_template('register.html', sti='d-none', title='Registro')
+		return render_template('register.html', sti='d-none')
 

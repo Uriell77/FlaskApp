@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block notificacion %}
-<div class="alert alert-success alert-dismissible fade show position-absolute {%block stil%} {{ sti }} {% endblock %}" role="alert" style="width: 100%">
+<div class="alert alert-success alert-dismissible fade show position-absolute {%block stil%} {{ sti }} {% endblock %}" role="alert" style="width: 99%; z-index: 1">
     {% with mens = get_flashed_messages() %}
     {% if mens %}
     {% for men in mens %}

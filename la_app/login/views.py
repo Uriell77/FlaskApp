@@ -21,12 +21,12 @@ def login():
 		if user.booleano():
 			mens = "Te haz registrado correctamente"
 			flash(mens)
-			return render_template('login.html', sti='d-block', title='Login')
+			return render_template('login.html', sti='d-block')
 		else:
 			mens = "Password no concuerdan"
 			flash(mens)
-			return redirect('/reg') and render_template('register.html', sti='d-block', title='Registro')
+			return redirect('/reg') and render_template('register.html', sti='d-block')
 
 	else:
-		return render_template('login.html', sti='d-none', title='Login')
+		return render_template('login.html', sti='d-none')
 
